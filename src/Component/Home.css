@@ -1,0 +1,15 @@
+.opps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Centers vertically */
+    width: 100%; /* Ensures full width */
+    padding: 20px; /* Optional: adds some spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.opps img {
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Keeps aspect ratio */
+    object-fit: contain; /* Ensures the image fits within */
+}

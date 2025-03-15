@@ -1,0 +1,126 @@
+/* Navbar container */
+.Navebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #2c3e50;
+    color: white;
+    padding-right: 20px;
+}
+
+/* Logo styling */
+.logo img {
+    height:100px; /* Adjusted for better scaling */
+    width: 200px;
+    
+}
+
+/* Search bar styling */
+.search input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    padding-right: 100px;
+}
+
+/* Navigation links */
+.Topics {
+    display: flex;
+    gap: 50px;
+}
+
+/* Dropdown menu styling */
+.Tutorial, .Courses, .Articles {
+    position: relative;
+}
+
+.Tutorial button, .Courses button, .Articles button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.Tutorial button:hover, .Courses button:hover, .Articles button:hover {
+    color: #f1c40f;
+}
+
+/* Dropdown menus */
+.languages, .article-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    color: black;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none;
+}
+
+.Tutorial:hover .languages,
+.Courses:hover .languages,
+.Articles:hover .article-menu {
+    display: block;
+}
+
+/* Dropdown menu items */
+.languages ul, .article-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.languages li, .article-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.languages li:hover, .article-menu li:hover {
+    background-color: #f1c40f;
+}
+
+.languages li a, .article-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Login Button */
+button {
+    background-color: #f1c40f;
+    color: black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    .Navebar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Topics {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search input {
+        width: 100%;
+        margin: 10px 0;
+    }
+} */
