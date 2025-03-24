@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./JavaTopics.css";
 import CodeEditor from "../CodeEditor";
+import GeminiChat from "./Component2/GeminiChat ";
 
 const javaTopics = {
   "Core Java": [
@@ -54,6 +55,7 @@ const javaTopics = {
 };
 
 export default function JavaTopics() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
   return (
     <div className="Parent">
       <div className="child1" style={{ padding: "20px", fontFamily: "Arial" }}>
@@ -122,9 +124,23 @@ export default function JavaTopics() {
             programming language.
           </p>
         </div>
-        <div>
-    <CodeEditor />
-    </div>
+
+        <div className="buttons-container">
+          <CodeEditor />
+          <button className="chat-button" onClick={() => setIsChatOpen(true)}>
+            Take Help
+          </button>
+        </div>
+        {isChatOpen && (
+          <div className="model">
+            <div className="model-content">
+              <span className="close" onClick={() => setIsChatOpen(false)}>
+                &times;
+              </span>
+              <GeminiChat />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -93,7 +93,8 @@ const CodeEditor = () => {
 
       {/* Monaco Editor */}
       <Editor
-        height="400px"
+        height="500px"
+        width='90rem'
         theme="vs-dark"
         language={language} // Dynamically change editor syntax highlighting
         value={code}

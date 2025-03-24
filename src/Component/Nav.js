@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import shital from "../Images/shital.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import "./Nav.css";
 
 export default function Nav() {
@@ -26,19 +26,19 @@ export default function Nav() {
               <div className="languages">
                 <ul>
                   <li>
-                    <Link to="/Python">Python</Link>
+                    <Link to="/PythonTopics">Python</Link>
                   </li>
                   <li>
                     <Link to="/JavaTopics">Java</Link>
                   </li>
                   <li>
-                    <Link to="/C++">C++</Link>
+                    <Link to="/CppTopics">C++</Link>
                   </li>
                   <li>
-                    <Link to="/Dart">Dart</Link>
+                    <Link to="/DartTopics">Dart</Link>
                   </li>
                   <li>
-                    <Link to="/JavaScript">JavaScript</Link>
+                    <Link to="/JavaScriptTopics">JavaScript</Link>
                   </li>
                 </ul>
               </div>
@@ -51,24 +51,7 @@ export default function Nav() {
             onMouseLeave={() => setDropdown(null)}
           >
             <button>Courses</button>
-            {dropdown === "Courses" && (
-              <div className="languages">
-                <ul>
-                  <li>
-                    <Link to="/DSA">DSA</Link>
-                  </li>
-                  <li>
-                    <Link to="/WEB_DEV">Web Development</Link>
-                  </li>
-                  <li>
-                    <Link to="/ML">Machine Learning</Link>
-                  </li>
-                  <li>
-                    <Link to="/Flutter">Flutter</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+            {dropdown === "Courses" && <div className="languages"></div>}
           </div>
 
           <div
@@ -77,24 +60,16 @@ export default function Nav() {
             onMouseLeave={() => setDropdown(null)}
           >
             <button>Articles</button>
-            {dropdown === "Articles" && (
-              <div className="article-menu">
-                <ul>
-                  <li>
-                    <Link to="/CodingArticles">Coding Articles</Link>
-                  </li>
-                  <li>
-                    <Link to="/InterviewTips">Interview Tips</Link>
-                  </li>
-                  <li>
-                    <Link to="/ProjectIdeas">Project Ideas</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+            {dropdown === "Articles" && <div className="article-menu"></div>}
           </div>
         </div>
-        <button>Login</button>
+
+        <div className="extras">
+          <Link to="/chat" className="hover:underline">
+            Chat with Gemini
+          </Link>
+          <button>Login</button>
+        </div>
       </div>
     </nav>
   );
